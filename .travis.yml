@@ -18,9 +18,9 @@ before_script:
   - rsyslogd &
   - sleep 1
 script:
-  - go get -u golang.org/x/lint/golint
+  - curl -L https://git.io/vp6lP | sh
   - ls
-  - $GOPATH/bin/golint ./...
+  - gometalinter ./...
 # script:
   # - make test
   # - ./check-fmt.sh
