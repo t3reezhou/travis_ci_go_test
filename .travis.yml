@@ -17,10 +17,12 @@ install: true
 before_script:
   - rsyslogd &
   - sleep 1
-script:
   - curl -L https://git.io/vp6lP | sh
+  - pwd
+  - export PATH=$PATH:$pwd/bin
+script:
   - ls
-  - ./bin/gometalinter ./...
+  - gometalinter ./...
 # script:
   # - make test
   # - ./check-fmt.sh
