@@ -17,8 +17,8 @@ before_script:
   - rsyslogd &
   - sleep 1
   - curl -L https://git.io/vp6lP | sh
-  - PWD
-  - export PATH=$PATH:$PWD/bin
+  - pwd
+  - export PATH=$PATH:`pwd`/bin
   - echo $PATH
 script:
   - ls
