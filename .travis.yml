@@ -16,7 +16,7 @@ install: true
 before_script:
   - rsyslogd &
   - sleep 1
-  - curl -L https://git.io/vp6lP | sh
+  # - curl -L https://git.io/vp6lP | sh
   - pwd
   - export PATH=$PATH:`pwd`/bin
   - echo $PATH
@@ -24,7 +24,7 @@ before_script:
 script:
   - ls
   - golangci-lint run       # run a bunch of code checkers/linters in parallel
-  - gometalinter ./...
+  # - gometalinter ./...
 # script:
   # - make test
   # - ./check-fmt.sh
